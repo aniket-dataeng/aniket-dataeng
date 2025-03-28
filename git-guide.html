@@ -5,6 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git Commands Guide</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: left;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.6;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        img {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,20 +56,33 @@
         <h2>1. Initializing a Repository</h2>
         <p>To start tracking your project with Git, navigate to the project directory and run:</p>
         <pre><code>git init</code></pre>
-
-        <h2>2. Checking the Status</h2>
+        <img src="assets/images/git-init.png" alt="Git init command example">
+        
+        <h2>2. Connecting to a Remote Repository</h2>
+        <p>Link your local project to a remote GitHub repository:</p>
+        <pre><code>git remote add origin https://github.com/your-username/your-repo.git</code></pre>
+        <img src="assets/images/git-remote-add.png" alt="Git remote add example">
+        
+        <h2>3. Checking the Status</h2>
         <p>See which files are untracked or modified:</p>
         <pre><code>git status</code></pre>
-
-        <h2>3. Staging and Committing Changes</h2>
+        
+        <h2>4. Staging and Committing Changes</h2>
         <p>Stage files before committing:</p>
         <pre><code>git add .</code></pre>
         <p>Commit with a message:</p>
         <pre><code>git commit -m "Initial commit"</code></pre>
-
-        <h2>4. Pushing to GitHub</h2>
+        
+        <h2>5. Pushing to GitHub</h2>
         <p>Push your code to GitHub:</p>
         <pre><code>git push origin main</code></pre>
+        
+        <h2>6. Pulling Latest Changes</h2>
+        <p>Always pull the latest changes before pushing to avoid conflicts:</p>
+        <pre><code>git pull origin main --rebase</code></pre>
+        
+        <h2>7. Handling Multiple Repositories</h2>
+        <p>Each folder should be linked to only one repository. If you have multiple projects, keep them in separate directories, each with its own Git repository.</p>
     </section>
 </body>
 </html>
